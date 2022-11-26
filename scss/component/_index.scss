@@ -1,0 +1,178 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+body {
+    font-family: $primary-font;
+    background-color: $lighter-gray;
+    padding: toRem(40) 0;
+    line-height: 1.2;
+    @include flex($direction: column, $justify: center,$align: center);
+    min-height: 100vh;
+}
+
+.grid {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-areas: 
+    "first"
+    "second"
+    "third"
+    "fourth"  
+    "fifth"
+    ;
+    // gap: 1rem;
+    @include media(sm) {
+        grid-template-areas: 
+            "first fourth"
+            "second third"
+            "fifth fifth"
+        ;
+    }
+    @include media(md) {
+        grid-template-areas: 
+            "first fourth"
+            "second fifth"
+            "third fifth"
+        ;
+    }
+    @include media(xl) {
+        // row-gap: toRem(20);
+        // column-gap: toRem(26);
+        grid-template-areas: 
+            "first first second fifth"
+            "third fourth fourth fifth"
+        ;
+    }
+}
+
+
+.testimonial {
+    color: $lighter-gray;
+    border-radius: $b-radius;
+    padding: toRem(22) toRem(30);
+    // box-shadow: 18px 28px 24px 7px $gray;
+    box-shadow: 2.5rem 3.75rem 3rem -2rem hsla(217 19% 35%/ 40%);
+    &__image {
+        margin-bottom: toRem(18);
+        @include flex($direction: row, $justify: flex-start,$align: center)
+    }
+    &__text, 
+    &__image {
+        position: relative;
+    }
+
+}
+.author {
+    font-size: .8125rem;
+    font-weight: 500;
+}
+.author span {
+    display: block;
+    opacity: 50%;
+    font-size: 0.6875rem;
+}
+.para-1 {
+    font-size: 1.25rem;
+    line-height: 1.2;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+.para-2 {
+    opacity: 70%;
+    font-size: toRem(14);
+}
+
+.testimonial-1 {
+    grid-area: first;
+    background-color: $bkg-violet;
+    position: relative;
+}
+.testimonial-1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 5%;
+    width: toRem(104);
+    height: toRem(102);
+    background-image: url(../../images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+}
+.testimonial-5,.testimonial-4, .testimonial-2, .testimonial-3 {
+    margin-top: 1.5rem;
+}
+.testimonial-1, .testimonial-2, .testimonial-3 {
+    @include media(sm) {
+        margin-right: 1.5rem;
+    }
+}
+
+.testimonial-2 {
+    background-color: $bkg-grayish-blue;
+    grid-area: second;
+    @include media(xl) {
+        margin-top: 0;
+    }
+}
+.testimonial-3 {
+    background-color: $white;
+    grid-area: third;
+    @include media(sm) {
+        margin-right: 0;
+    }
+    @include media(md) {
+        margin-right: 1.5rem;
+    }
+}
+.testimonial-4 {
+    background-color: $blackish-blue;
+    grid-area: fourth;
+    @include media(sm) {
+        margin-top: 0;
+    }
+    @include media(xl) {
+        margin-top: 1.2rem;
+        margin-right: 1.2rem;
+    }
+}
+.testimonial-5 {
+    background-color: $white;
+    grid-area: fifth;
+    @include media(xl) {
+        margin-top: 0;
+    }
+}
+.dr-text {
+    color: $blackish-blue
+}
+.image{
+    border-radius: 50%;
+    width: toRem(32);
+    aspect-ratio: 1;
+    object-fit: cover;
+    margin-right: toRem(14);
+    border: 0.125em solid $currentColor;
+}
+.purple-border {
+    border: 0.125em solid hsl(263, 84%, 62%)
+}
+.gray-border {
+    border: 0.125em solid $bkg-grayish-blue
+}
+
+footer {
+    display: none;
+    padding: .5em 0;
+    text-align: center;
+}
+.ft__link {
+    color: $bkg-violet;
+    transition: outline .35s ease-in-out;
+    &:where(:focus-visible, :hover) {
+        outline: .25em solid  hsl(263, 84%, 62%);
+        outline-offset: .15em;
+    }
+    &:where(:focus) {
+        outline: none;
+    }
+}
+// missing thing: 1/ the border around the images should be diffrent it's not the same 
