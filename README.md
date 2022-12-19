@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here]([https://github.com/PhoenixDev22/testimonials-grid-section-main])
-- Live Site URL: [live site URL here]([https://testimonial-phoenixdev22.netlify.app/])
+- Solution URL: [Add solution URL here](https://github.com/PhoenixDev22/testimonials-grid-section-main)
+- Live Site URL: [live site URL here](https://testimonial-phoenixdev22.netlify.app/)
 
 
 ### Built with
@@ -53,5 +53,5 @@ Users should be able to:
 
 ## Author
 
-- Frontend Mentor - [@PhoenixDev22]([https://www.frontendmentor.io/profile/yourusername](https://www.frontendmentor.io/profile/PhoenixDev22))
+- Frontend Mentor - [@PhoenixDev22](https://www.frontendmentor.io/profile/yourusername](https://www.frontendmentor.io/profile/PhoenixDev22)
 
