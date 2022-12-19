@@ -12,9 +12,6 @@
     @if $breakpoint == xl {
         @media screen and (min-width: 1200px) { @content };
     }
-    @if $breakpoint == xxl {
-        @media screen and (min-width: 1400px) { @content };
-    }
 }
 
 //Convert Px To Rem Mixin

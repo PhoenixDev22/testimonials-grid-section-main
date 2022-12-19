@@ -50,38 +50,16 @@ body {
     color: $lighter-gray;
     border-radius: $b-radius;
     padding: toRem(22) toRem(30);
-    // box-shadow: 18px 28px 24px 7px $gray;
     box-shadow: 2.5rem 3.75rem 3rem -2rem hsla(217 19% 35%/ 40%);
-    &__image {
-        margin-bottom: toRem(18);
-        @include flex($direction: row, $justify: flex-start,$align: center)
-    }
     &__text, 
     &__image {
         position: relative;
     }
-
+    &__image {
+        margin-bottom: toRem(18);
+        @include flex($direction: row, $justify: flex-start,$align: center)
+    }  
 }
-.author {
-    font-size: .8125rem;
-    font-weight: 500;
-}
-.author span {
-    display: block;
-    opacity: 50%;
-    font-size: 0.6875rem;
-}
-.para-1 {
-    font-size: 1.25rem;
-    line-height: 1.2;
-    font-weight: 500;
-    margin-bottom: 1rem;
-}
-.para-2 {
-    opacity: 70%;
-    font-size: toRem(14);
-}
-
 .testimonial-1 {
     grid-area: first;
     background-color: $bkg-violet;
@@ -175,4 +153,3 @@ footer {
         outline: none;
     }
 }
-// missing thing: 1/ the border around the images should be diffrent it's not the same 
