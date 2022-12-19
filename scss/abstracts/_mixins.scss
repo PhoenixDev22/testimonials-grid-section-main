@@ -14,7 +14,7 @@
     }
 }
 
-//Convert Px To Rem Mixin
+//Convert Px To Rem Function
 @function toRem($value) {
     $remValue: ($value / 16) + rem;
     @return $remValue;
